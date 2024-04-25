@@ -1,0 +1,10 @@
+from googletrans import Translator, LANGUAGES
+
+def translate_text(text, dest_language):
+    translator = Translator()
+    translation = translator.translate(text, dest=dest_language)
+    print(f"Original: {text}")
+    print(f"Translated ({LANGUAGES[dest_language]}): {translation.text}")
+
+# Example usage
+translate_text("Hello, how are you?", 'es')  # Translates the text to Spanish
